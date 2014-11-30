@@ -1,0 +1,7 @@
+(userName, tweetTime, writerName)
+user1, 2014-10-23 15:31:06, userd
+user1, 2014-10-23 15:51:16, user1
+user3, 2014-10-23 15:21:36, user2
+user5, 2014-10-23 15:31:46, user3
+user3, 2014-10-23 15:31:56, user2
+user1, 2014-10-23 15:41:36, user4

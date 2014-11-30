@@ -1,0 +1,6 @@
+mysql -h localhost -u root -p
+
+use yiqinDB;
+
+
+sed 's/ \+/ /g' users.txt > new.txt
