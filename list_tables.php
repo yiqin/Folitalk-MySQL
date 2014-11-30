@@ -19,7 +19,7 @@ mysqli_select_db($dbcon, $database)
 print 'Selected database successfully!<br>';
 
 // Listing tables in your database
-$query = 'SELECT * FROM User';
+$query = 'SHOW TABLES';
 $result = mysqli_query($dbcon, $query)
   or die('Show tables failed: ' . mysqli_error());
 
@@ -28,7 +28,7 @@ print "The tables in $database database are:<br>";
 // Printing table names in HTML
 print '<ul>';
 while ($tuple = mysqli_fetch_row($result)) {
-   print "<li>$tuple[0] $tuple[1]";
+   print "<li>$tuple[0]";
 }
 print '</ul>';
 

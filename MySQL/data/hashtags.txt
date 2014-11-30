@@ -1,0 +1,8 @@
+label, currentTrend
+Chicago, 100
+New York, 102
+Madison is cold, 104544
+Ann, 108
+Chicago2, 6000
+Chicago Music, 32
+HW, 454325320
