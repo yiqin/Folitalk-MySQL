@@ -15,7 +15,7 @@ print 'Connected successfully!<br>';
 $user = $_REQUEST['user'];
 
 // Get the attributes of the user with the given username
-$query = "SELECT * FROM User WHERE name = '$user'";
+$query = "SELECT username_follower FROM Follow WHERE username_leader = '$user'";
 $result = mysqli_query($dbcon, $query)
   or die('Query failed: ' . mysqli_error($dbcon));
 
@@ -23,14 +23,13 @@ $result = mysqli_query($dbcon, $query)
 $tuple = mysqli_fetch_array($result, MYSQL_ASSOC)
   or die("User $user not found!");
 
-print "User <b>$user</b> has the following attributes:";
+print "User <b>$user</b> has the following followers:";
 
 // Printing user attributes in HTML
 print '<ul>'; 
-print '<li> Name: '.$tuple['name']; 
-print '<li> Timezone: '.$tuple['timezone'];
-print '<li> Language: '.$tuple['language'];
-print '<li> Email: '.$tuple['email'];
+while ($tuple = mysqli_fetch_row($result)) {
+   print "<li>$tuple[0]";
+}
 print '</ul>';
 
 // Free result

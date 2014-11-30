@@ -8,12 +8,17 @@
 
 	<h1>CS53001 Web Interface Example</h1>
 
-	#1. List all tables in your database <code>list_attrs.php</code>:
+	#1. <code>list_attrs.php</code>
+	<p>
+	List all tables in your database:
+	<p>
 	<a href="list_tables.php">List your tables!</a>
 
 	<hr><p>
 
-	#2. Get all attributes of a user given a username.  The script that runs when you press the <it>Submit</it> button is <code>list_attrs.php</code>.
+	#2. <code>list_attrs.php</code>
+	<p>
+	Get all attributes of a user given a username.  The script that runs when you press the <it>Submit</it> button is .
 	<p>
 
 	<form method=get action="list_attrs.php">
@@ -24,17 +29,86 @@
 
 	<hr><p>
 
-	#3. Get the user's tweets <code>show_user_and_tweets.php</code>:
-	<form method=get action="list_attrs.php">
+	#3. <code>show_user_and_tweets.php</code>
+	<p>
+	Get the user's tweets:
+	<form method=get action="show_user_and_tweets.php">
 	<b>Enter username:</b><br />
 	<input type="text" name="user"><br />
 	<input type="submit" value="Submit">
 	</form>
 	
-	#4. Get all followers of a user given a username
-	
+	<hr><p>
+
+	#4. <code>show_user_and_followers.php</code>
+	<p>
+	Get all followers of a user given a username:
+	<form method=get action="show_user_and_followers.php">
+	<b>Enter username:</b><br />
+	<input type="text" name="user"><br />
+	<input type="submit" value="Submit">
+	</form>	
+
+	<hr><p>
+
+	#5. <code>show_user_and_leaders.php</code>
+	<p>
+	Get all users that a given user follower:
+	<form method=get action="show_user_and_leaders.php">
+	<b>Enter username:</b><br />
+	<input type="text" name="user"><br />
+	<input type="submit" value="Submit">
+	</form>	
+
+	<hr><p>
+
+	#6. <code>list_hashtags.php</code>
+	<p>
+	List all hashtags in your database:
+	<p>
+	<a href="list_hashtags.php">List your hashtag!</a>	
+
+	<hr><p>
+
+	#7. <code>find_users_who_send.php</code>
+	<p>
+	Find users who send more tweets than the number of tweets sent by a given user.
+	<form method=get action="find_users_who_send.php">
+	<b>Enter username:</b><br />
+	<input type="text" name="user"><br />
+	<input type="submit" value="Submit">
+	</form>	
+
+	<hr><p>
+
+	#8. <code>find_users_who_follow_leader.php</code>
+	<p>
+	Find all user who follow one of a given user's leader
+	<form method=get action="find_users_who_follow_leader.php">
+	<b>Enter username:</b><br />
+	<input type="text" name="user"><br />
+	<input type="submit" value="Submit">
+	</form>	
+
+	<hr><p>	
 
 
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -15,20 +15,23 @@ print 'Connected successfully!<br>';
 $user = $_REQUEST['user'];
 
 // Get the attributes of the user with the given username
-$query = "SELECT t.content As tweetContent
-		  FROM Tweet t
-		  WHERE t.writerName = '$user'";
+$query = "SELECT DISTINCT username_follower
+		  FROM Follow f
+		  JOIN (SELECT username_leader
+		  FROM Follow
+		  WHERE username_follower = '$user') User1Follows
+		  ON f.username_follower = User1Follows.username_leader";
 $result = mysqli_query($dbcon, $query)
   or die('Query failed: ' . mysqli_error($dbcon));
 
 // Can also check that there is only one tuple in the result
 $tuple = mysqli_fetch_array($result, MYSQL_ASSOC)
-  or die("User $user not found!");
+  or die("User $user not found! No users who follow one of $user 's leader");
 
-print "User <b>$user</b> has the following tweets:";
+print "Find all users who follow one of <b>$user</b>'s leader";
 
 // Printing user attributes in HTML
-print '<ul>'; 
+print '<ul>';
 while ($tuple = mysqli_fetch_row($result)) {
    print "<li>$tuple[0]";
 }

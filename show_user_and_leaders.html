@@ -15,9 +15,7 @@ print 'Connected successfully!<br>';
 $user = $_REQUEST['user'];
 
 // Get the attributes of the user with the given username
-$query = "SELECT t.content As tweetContent
-		  FROM Tweet t
-		  WHERE t.writerName = '$user'";
+$query = "SELECT username_follower FROM Follow WHERE username_follower = '$user'";
 $result = mysqli_query($dbcon, $query)
   or die('Query failed: ' . mysqli_error($dbcon));
 
@@ -25,7 +23,7 @@ $result = mysqli_query($dbcon, $query)
 $tuple = mysqli_fetch_array($result, MYSQL_ASSOC)
   or die("User $user not found!");
 
-print "User <b>$user</b> has the following tweets:";
+print "User <b>$user</b> has the following followers:";
 
 // Printing user attributes in HTML
 print '<ul>'; 
