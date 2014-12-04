@@ -8,6 +8,8 @@
 
 	<h1>CS53001 Web Interface Example</h1>
 
+	<h1>usernames are user1, user2, user3, user4, user5.........</h1>
+
 	#1. <code>list_attrs.php</code>
 	<p>
 	List all tables in your database:
@@ -45,6 +47,7 @@
 	Get all followers of a user given a username:
 	<form method=get action="show_user_and_followers.php">
 	<b>Enter username:</b><br />
+	<b>Some users will return null values. Try user5205, user511 and others.</b><br />
 	<input type="text" name="user"><br />
 	<input type="submit" value="Submit">
 	</form>	
@@ -53,7 +56,7 @@
 
 	#5. <code>show_user_and_leaders.php</code>
 	<p>
-	Get all users that a given user follower:
+	Get all users that a given user follow:
 	<form method=get action="show_user_and_leaders.php">
 	<b>Enter username:</b><br />
 	<input type="text" name="user"><br />

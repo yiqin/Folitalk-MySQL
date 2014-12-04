@@ -15,7 +15,7 @@ print 'Connected successfully!<br>';
 $user = $_REQUEST['user'];
 
 // Get the attributes of the user with the given username
-$query = "SELECT username_follower FROM Follow WHERE username_follower = '$user'";
+$query = "SELECT username_leader FROM Follow WHERE username_follower = '$user'";
 $result = mysqli_query($dbcon, $query)
   or die('Query failed: ' . mysqli_error($dbcon));
 
