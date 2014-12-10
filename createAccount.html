@@ -15,47 +15,23 @@
 	}
 	</script>
 
-	<form method=get action="list_attrs.php">
+	<form method=get action="create_new_account.php">
 		<b>Enter username:</b><br />
 		<input type="text" name="user"><br />
 
 		<b>Enter timezone:</b><br />
-		<input type="text" name="user"><br />
+		<input type="text" name="timezone"><br />
 
 		<b>Enter language:</b><br />
-		<input type="text" name="user"><br />
+		<input type="text" name="language"><br />
 
 		<b>Enter email:</b><br />
-		<input type="text" name="user"><br />
+		<input type="text" name="email"><br />
 
 		<input type="submit" value="Submit">
 	</form>
 
 
-
-
-
-<?php
-
-$host = 'cspp53001.cs.uchicago.edu';
-$username = 'yiqin';
-$password = 'aitiejah';
-$database = $username.'DB';
-
-$dbcon = mysqli_connect($host, $username, $password, $database)
-   or die('Could not connect: ' . mysqli_connect_error());
-
-mysqli_select_db($dbcon, $database)
-   or die('Could not select database');
-
-$query = 'SHOW TABLES';
-$result = mysqli_query($dbcon, $query) or die('Show tables failed: ' . mysqli_error());
-
-
-mysqli_free_result($result);
-
-mysqli_close($dbcon);
-?> 
 
 
 
