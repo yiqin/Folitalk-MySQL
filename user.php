@@ -7,13 +7,15 @@
 		<h2>User Profile Page</h2>
         <p>
           <?php
-          	   session_start();
+          	   
 
                // Connection parameters 
 				$host = 'cspp53001.cs.uchicago.edu';
 				$username = 'yiqin';
 				$password = 'aitiejah';
 				$database = $username.'DB';
+
+				session_start();
 
 				// Attempting to connect
 				$dbcon = mysqli_connect($host, $username, $password, $database)
