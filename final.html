@@ -8,17 +8,37 @@
 	<h1>CS53001 Final Home Page</h1>
 
 	<h2>You are not sign in. Please create an account.</h2>
-	<h2>If you don't want to create an account, usernames are user1, user2, user3, user4, user5.........</h2>
-
+	
 	<input type=button onClick="parent.location='createAccount.html'" value='create a new account'>
 	<p>
 
 
+	<h2>If you don't want to create an account, you can select user1, user2, user3, user4, user5.........</h2>
+	<form method=get action="select_user.php">
+		<input type="radio" name="user" value="user1" checked>user1
+	<br>
+		<input type="radio" name="user" value="user2">user2
+		<br>
+		<input type="radio" name="user" value="user3">user3
+		<br>
+		<input type="radio" name="user" value="user4">user4
+		<br>
+		<input type="radio" name="user" value="user5">user5
+		<br>
+		<input type="radio" name="user" value="user6">user6
+		<br>
+		<input type="radio" name="user" value="user7">user7
+		<br>
+		<input type="radio" name="user" value="user8">user8
+		<br>
+		<input type="radio" name="user" value="user9">user9
+	<br><br>
+		<input type="submit" value="Submit">	
+	</form>
+
+
 
 </body>
-
-
-
 
 </html>
 
