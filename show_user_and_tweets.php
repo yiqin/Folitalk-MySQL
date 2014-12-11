@@ -9,7 +9,7 @@ $database = $username.'DB';
 // Attempting to connect
 $dbcon = mysqli_connect($host, $username, $password, $database)
    or die('Could not connect: ' . mysqli_connect_error());
-print 'Connected successfully!<br>';
+// print 'Connected successfully!<br>';
 
 // Getting the input parameter (user):
 $user = $_REQUEST['user'];
@@ -25,14 +25,16 @@ $result = mysqli_query($dbcon, $query)
 $tuple = mysqli_fetch_array($result, MYSQL_ASSOC)
   or die("User $user not found!");
 
-print "User <b>$user</b> has the following tweets:";
+// print "User <b>$user</b> has the following tweets:";
 
 // Printing user attributes in HTML
+/*
 print '<ul>'; 
 while ($tuple = mysqli_fetch_row($result)) {
    print "<li>$tuple[0]";
 }
 print '</ul>';
+*/
 
 // Free result
 mysqli_free_result($result);
